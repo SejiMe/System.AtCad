@@ -24,7 +24,7 @@ namespace AtCad
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-             
+                
         }
 
         private void splashForm()
@@ -41,5 +41,13 @@ namespace AtCad
 
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (Thread.CurrentThread != null)
+            {
+                Application.ExitThread();
+            }
+            Application.Exit();
+        }
     }
 }

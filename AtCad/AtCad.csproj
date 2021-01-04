@@ -103,6 +103,30 @@
     <Compile Include="SplashForm.Designer.cs">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboard.Designer.cs">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucInventory.Designer.cs">
+      <DependentUpon>ucInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucRecords.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucRecords.Designer.cs">
+      <DependentUpon>ucRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTransactions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTransactions.Designer.cs">
+      <DependentUpon>ucTransactions.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +142,18 @@
     </Compile>
     <EmbeddedResource Include="SplashForm.resx">
       <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboard.resx">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucInventory.resx">
+      <DependentUpon>ucInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucRecords.resx">
+      <DependentUpon>ucRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTransactions.resx">
+      <DependentUpon>ucTransactions.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
