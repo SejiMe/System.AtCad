@@ -24,7 +24,7 @@ namespace AtCad
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-                
+            clock.Start(); 
         }
 
         private void splashForm()
@@ -48,6 +48,16 @@ namespace AtCad
                 Application.ExitThread();
             }
             Application.Exit();
+        }
+
+        private void clock_Tick(object sender, EventArgs e)
+        {
+            lblClock.Text = DateTime.Now.ToString("hh:mm:ss");
+            lblDate.Text = DateTime.Now.ToString("MMM dd, yyyy");
+            lblDay.Text = DateTime.Now.ToString("dddd");
+            lblDate.TextAlign = ContentAlignment.TopCenter;
+            lblClock.TextAlign = ContentAlignment.MiddleCenter;
+            lblDay.TextAlign = ContentAlignment.BottomCenter;
         }
     }
 }
