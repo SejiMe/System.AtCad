@@ -32,6 +32,7 @@ namespace AtCad
             this.components = new System.ComponentModel.Container();
             this.topPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblDay = new System.Windows.Forms.Label();
             this.lblClock = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,10 +44,8 @@ namespace AtCad
             this.btnInventory = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnDashboard = new System.Windows.Forms.Button();
-            this.leftSideTopPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.clock = new System.Windows.Forms.Timer(this.components);
-            this.lblDay = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -58,9 +57,9 @@ namespace AtCad
             this.topPanel.Controls.Add(this.panel1);
             this.topPanel.Controls.Add(this.label2);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(180, 0);
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1100, 89);
+            this.topPanel.Size = new System.Drawing.Size(1280, 89);
             this.topPanel.TabIndex = 0;
             // 
             // panel1
@@ -69,10 +68,20 @@ namespace AtCad
             this.panel1.Controls.Add(this.lblClock);
             this.panel1.Controls.Add(this.lblDate);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(847, 0);
+            this.panel1.Location = new System.Drawing.Point(1027, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(253, 89);
             this.panel1.TabIndex = 3;
+            // 
+            // lblDay
+            // 
+            this.lblDay.AutoSize = true;
+            this.lblDay.Font = new System.Drawing.Font("Digital-7", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDay.Location = new System.Drawing.Point(81, 32);
+            this.lblDay.Name = "lblDay";
+            this.lblDay.Size = new System.Drawing.Size(98, 22);
+            this.lblDay.TabIndex = 3;
+            this.lblDay.Text = "SATURDAY";
             // 
             // lblClock
             // 
@@ -108,24 +117,23 @@ namespace AtCad
             // 
             this.leftPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.leftPanel.Controls.Add(this.leftMainPanel);
-            this.leftPanel.Controls.Add(this.leftSideTopPanel);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftPanel.Location = new System.Drawing.Point(0, 0);
+            this.leftPanel.Location = new System.Drawing.Point(0, 89);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(180, 820);
+            this.leftPanel.Size = new System.Drawing.Size(180, 731);
             this.leftPanel.TabIndex = 1;
             // 
             // leftMainPanel
             // 
             this.leftMainPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.leftMainPanel.Controls.Add(this.label3);
             this.leftMainPanel.Controls.Add(this.btnExit);
             this.leftMainPanel.Controls.Add(this.btnRecords);
             this.leftMainPanel.Controls.Add(this.btnTransactions);
             this.leftMainPanel.Controls.Add(this.btnInventory);
-            this.leftMainPanel.Controls.Add(this.label3);
             this.leftMainPanel.Controls.Add(this.btnDashboard);
             this.leftMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.leftMainPanel.Location = new System.Drawing.Point(0, 89);
+            this.leftMainPanel.Location = new System.Drawing.Point(0, 0);
             this.leftMainPanel.Name = "leftMainPanel";
             this.leftMainPanel.Size = new System.Drawing.Size(180, 731);
             this.leftMainPanel.TabIndex = 1;
@@ -166,6 +174,7 @@ namespace AtCad
             this.btnRecords.Text = "Records";
             this.btnRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRecords.UseVisualStyleBackColor = true;
+            this.btnRecords.Click += new System.EventHandler(this.btnRecords_Click);
             // 
             // btnTransactions
             // 
@@ -184,6 +193,7 @@ namespace AtCad
             this.btnTransactions.Text = "Transactions";
             this.btnTransactions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTransactions.UseVisualStyleBackColor = true;
+            this.btnTransactions.Click += new System.EventHandler(this.btnTransactions_Click);
             // 
             // btnInventory
             // 
@@ -202,12 +212,13 @@ namespace AtCad
             this.btnInventory.Text = "Inventory";
             this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInventory.UseVisualStyleBackColor = true;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sylfaen", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 10);
+            this.label3.Location = new System.Drawing.Point(22, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 48);
             this.label3.TabIndex = 2;
@@ -230,14 +241,7 @@ namespace AtCad
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = true;
-            // 
-            // leftSideTopPanel
-            // 
-            this.leftSideTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.leftSideTopPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftSideTopPanel.Name = "leftSideTopPanel";
-            this.leftSideTopPanel.Size = new System.Drawing.Size(180, 89);
-            this.leftSideTopPanel.TabIndex = 2;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // mainPanel
             // 
@@ -253,24 +257,14 @@ namespace AtCad
             this.clock.Interval = 1000;
             this.clock.Tick += new System.EventHandler(this.clock_Tick);
             // 
-            // lblDay
-            // 
-            this.lblDay.AutoSize = true;
-            this.lblDay.Font = new System.Drawing.Font("Digital-7", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDay.Location = new System.Drawing.Point(81, 32);
-            this.lblDay.Name = "lblDay";
-            this.lblDay.Size = new System.Drawing.Size(98, 22);
-            this.lblDay.TabIndex = 3;
-            this.lblDay.Text = "SATURDAY";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 820);
             this.Controls.Add(this.mainPanel);
-            this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftPanel);
+            this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -295,7 +289,6 @@ namespace AtCad
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Panel leftMainPanel;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Panel leftSideTopPanel;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button btnRecords;
         private System.Windows.Forms.Button btnTransactions;
