@@ -7,7 +7,4 @@ assignees: SejiMe
 
 ---
 
-####**Documents!** 
-.docs
-.dia
- anything documentation use for planning and engineering
+
