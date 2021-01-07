@@ -103,6 +103,12 @@
     <Compile Include="SplashForm.Designer.cs">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucClients.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucClients.Designer.cs">
+      <DependentUpon>ucClients.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     <EmbeddedResource Include="SplashForm.resx">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucClients.resx">
+      <DependentUpon>ucClients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +186,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>ATCADDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\customer_32px.png" />
+    <None Include="Resources\moleskine_32px white.png" />
+    <None Include="Resources\line_chart_30px.png" />
     <None Include="Resources\logout_rounded_down_32px.png" />
     <None Include="Resources\moleskine_24px.png" />
     <None Include="Resources\schedule_26px.png" />
