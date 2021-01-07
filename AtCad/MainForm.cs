@@ -58,6 +58,19 @@ namespace AtCad
             ucRecords.Instance.BringToFront();
         }
 
+
+        private void _UCClients()
+        {
+            if (!mainPanel.Controls.Contains(ucClients.Instance))
+            {
+                mainPanel.Controls.Add(ucClients.Instance);
+                ucClients.Instance.Dock = DockStyle.Fill;
+                ucClients.Instance.BringToFront();
+            }
+            ucClients.Instance.BringToFront();
+        }
+
+
         #endregion
 
         public MainForm()
@@ -73,7 +86,7 @@ namespace AtCad
             _UCRecords();
             _UCTransactions();
             _UCDashboard();
-
+            _UCClients();
             thread.Abort();
         }
 

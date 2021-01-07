@@ -63,29 +63,9 @@ namespace AtCad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap combo_chart_26px {
-            get {
-                object obj = ResourceManager.GetObject("combo_chart_26px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap customer_32px {
             get {
                 object obj = ResourceManager.GetObject("customer_32px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap inventory_flow_32px {
-            get {
-                object obj = ResourceManager.GetObject("inventory_flow_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,49 +83,9 @@ namespace AtCad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logout_rounded_down_32px {
-            get {
-                object obj = ResourceManager.GetObject("logout_rounded_down_32px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap moleskine_24px {
-            get {
-                object obj = ResourceManager.GetObject("moleskine_24px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap moleskine_32px_white {
             get {
                 object obj = ResourceManager.GetObject("moleskine_32px white", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap schedule_26px {
-            get {
-                object obj = ResourceManager.GetObject("schedule_26px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap warehouse_32px {
-            get {
-                object obj = ResourceManager.GetObject("warehouse_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
