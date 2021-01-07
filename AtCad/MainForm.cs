@@ -148,5 +148,10 @@ namespace AtCad
         {
             _UCInventory();
         }
+
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            _UCClients();
+        }
     }
 }

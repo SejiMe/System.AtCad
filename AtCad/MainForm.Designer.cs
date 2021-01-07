@@ -39,7 +39,7 @@ namespace AtCad
             this.label2 = new System.Windows.Forms.Label();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.leftMainPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClient = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnRecords = new System.Windows.Forms.Button();
@@ -134,7 +134,7 @@ namespace AtCad
             // leftMainPanel
             // 
             this.leftMainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(18)))));
-            this.leftMainPanel.Controls.Add(this.button1);
+            this.leftMainPanel.Controls.Add(this.btnClient);
             this.leftMainPanel.Controls.Add(this.label3);
             this.leftMainPanel.Controls.Add(this.btnExit);
             this.leftMainPanel.Controls.Add(this.btnRecords);
@@ -148,29 +148,30 @@ namespace AtCad
             this.leftMainPanel.Size = new System.Drawing.Size(180, 731);
             this.leftMainPanel.TabIndex = 1;
             // 
-            // button1
+            // btnClient
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Sylfaen", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::AtCad.Properties.Resources.customer_32px;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 339);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 40);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Client";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClient.FlatAppearance.BorderSize = 0;
+            this.btnClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClient.Font = new System.Drawing.Font("Sylfaen", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClient.Image = global::AtCad.Properties.Resources.customer_32px;
+            this.btnClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClient.Location = new System.Drawing.Point(21, 339);
+            this.btnClient.Name = "btnClient";
+            this.btnClient.Size = new System.Drawing.Size(139, 40);
+            this.btnClient.TabIndex = 8;
+            this.btnClient.Text = "Client";
+            this.btnClient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sylfaen", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 16);
+            this.label3.Location = new System.Drawing.Point(26, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 48);
             this.label3.TabIndex = 2;
@@ -205,7 +206,7 @@ namespace AtCad
             this.btnRecords.Font = new System.Drawing.Font("Sylfaen", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecords.Image = global::AtCad.Properties.Resources.moleskine_32px_white;
             this.btnRecords.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecords.Location = new System.Drawing.Point(12, 148);
+            this.btnRecords.Location = new System.Drawing.Point(21, 150);
             this.btnRecords.Name = "btnRecords";
             this.btnRecords.Size = new System.Drawing.Size(139, 40);
             this.btnRecords.TabIndex = 6;
@@ -224,7 +225,7 @@ namespace AtCad
             this.btnTransactions.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTransactions.Image = ((System.Drawing.Image)(resources.GetObject("btnTransactions.Image")));
             this.btnTransactions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransactions.Location = new System.Drawing.Point(12, 213);
+            this.btnTransactions.Location = new System.Drawing.Point(21, 213);
             this.btnTransactions.Name = "btnTransactions";
             this.btnTransactions.Size = new System.Drawing.Size(139, 40);
             this.btnTransactions.TabIndex = 4;
@@ -243,7 +244,7 @@ namespace AtCad
             this.btnInventory.Font = new System.Drawing.Font("Sylfaen", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(12, 278);
+            this.btnInventory.Location = new System.Drawing.Point(21, 276);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(139, 40);
             this.btnInventory.TabIndex = 3;
@@ -262,7 +263,7 @@ namespace AtCad
             this.btnDashboard.Font = new System.Drawing.Font("Sylfaen", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.Image = global::AtCad.Properties.Resources.line_chart_30px;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(12, 83);
+            this.btnDashboard.Location = new System.Drawing.Point(21, 87);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(139, 40);
             this.btnDashboard.TabIndex = 0;
@@ -327,7 +328,7 @@ namespace AtCad
         private System.Windows.Forms.Label lblClock;
         private System.Windows.Forms.Timer clock;
         private System.Windows.Forms.Label lblDay;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClient;
     }
 }
 

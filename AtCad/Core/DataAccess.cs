@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AtCad.Project_Data;
 using Dapper;
 
 namespace AtCad.Core
@@ -17,5 +18,16 @@ namespace AtCad.Core
 
             }
         }
+
+        public List<Client> getClient()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.connectionValue("ATCADDB")))
+            {
+                var clients = new List<Client>();
+                return clients;
+            }
+        }
+
+
     }
 }
