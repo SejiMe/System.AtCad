@@ -30,6 +30,7 @@ namespace AtCad
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.topPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDay = new System.Windows.Forms.Label();
@@ -38,11 +39,12 @@ namespace AtCad
             this.label2 = new System.Windows.Forms.Label();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.leftMainPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnRecords = new System.Windows.Forms.Button();
             this.btnTransactions = new System.Windows.Forms.Button();
             this.btnInventory = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.clock = new System.Windows.Forms.Timer(this.components);
@@ -54,6 +56,7 @@ namespace AtCad
             // 
             // topPanel
             // 
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(18)))));
             this.topPanel.Controls.Add(this.panel1);
             this.topPanel.Controls.Add(this.label2);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -64,6 +67,7 @@ namespace AtCad
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(18)))));
             this.panel1.Controls.Add(this.lblDay);
             this.panel1.Controls.Add(this.lblClock);
             this.panel1.Controls.Add(this.lblDate);
@@ -77,6 +81,7 @@ namespace AtCad
             // 
             this.lblDay.AutoSize = true;
             this.lblDay.Font = new System.Drawing.Font("Digital-7", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDay.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lblDay.Location = new System.Drawing.Point(81, 32);
             this.lblDay.Name = "lblDay";
             this.lblDay.Size = new System.Drawing.Size(98, 22);
@@ -87,6 +92,7 @@ namespace AtCad
             // 
             this.lblClock.AutoSize = true;
             this.lblClock.Font = new System.Drawing.Font("Digital-7 Mono", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClock.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lblClock.Location = new System.Drawing.Point(58, 55);
             this.lblClock.Name = "lblClock";
             this.lblClock.Size = new System.Drawing.Size(144, 28);
@@ -97,6 +103,7 @@ namespace AtCad
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Digital-7", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lblDate.Location = new System.Drawing.Point(42, 6);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(176, 28);
@@ -107,6 +114,7 @@ namespace AtCad
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sylfaen", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label2.Location = new System.Drawing.Point(105, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(535, 48);
@@ -125,7 +133,8 @@ namespace AtCad
             // 
             // leftMainPanel
             // 
-            this.leftMainPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.leftMainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(18)))));
+            this.leftMainPanel.Controls.Add(this.button1);
             this.leftMainPanel.Controls.Add(this.label3);
             this.leftMainPanel.Controls.Add(this.btnExit);
             this.leftMainPanel.Controls.Add(this.btnRecords);
@@ -133,10 +142,39 @@ namespace AtCad
             this.leftMainPanel.Controls.Add(this.btnInventory);
             this.leftMainPanel.Controls.Add(this.btnDashboard);
             this.leftMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.leftMainPanel.ForeColor = System.Drawing.Color.White;
             this.leftMainPanel.Location = new System.Drawing.Point(0, 0);
             this.leftMainPanel.Name = "leftMainPanel";
             this.leftMainPanel.Size = new System.Drawing.Size(180, 731);
             this.leftMainPanel.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Sylfaen", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::AtCad.Properties.Resources.customer_32px;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(12, 339);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(139, 40);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Client";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Sylfaen", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(129, 48);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "MENU";
             // 
             // btnExit
             // 
@@ -146,7 +184,7 @@ namespace AtCad
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Sylfaen", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Image = global::AtCad.Properties.Resources.logout_rounded_down_32px;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.Location = new System.Drawing.Point(9, 652);
             this.btnExit.Name = "btnExit";
@@ -165,7 +203,7 @@ namespace AtCad
             this.btnRecords.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecords.Font = new System.Drawing.Font("Sylfaen", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecords.Image = global::AtCad.Properties.Resources.moleskine_24px;
+            this.btnRecords.Image = global::AtCad.Properties.Resources.moleskine_32px_white;
             this.btnRecords.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRecords.Location = new System.Drawing.Point(12, 148);
             this.btnRecords.Name = "btnRecords";
@@ -184,7 +222,7 @@ namespace AtCad
             this.btnTransactions.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransactions.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransactions.Image = global::AtCad.Properties.Resources.inventory_flow_32px;
+            this.btnTransactions.Image = ((System.Drawing.Image)(resources.GetObject("btnTransactions.Image")));
             this.btnTransactions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTransactions.Location = new System.Drawing.Point(12, 213);
             this.btnTransactions.Name = "btnTransactions";
@@ -203,7 +241,7 @@ namespace AtCad
             this.btnInventory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventory.Font = new System.Drawing.Font("Sylfaen", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventory.Image = global::AtCad.Properties.Resources.warehouse_32px;
+            this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventory.Location = new System.Drawing.Point(12, 278);
             this.btnInventory.Name = "btnInventory";
@@ -214,16 +252,6 @@ namespace AtCad
             this.btnInventory.UseVisualStyleBackColor = true;
             this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sylfaen", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 48);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "MENU";
-            // 
             // btnDashboard
             // 
             this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -232,7 +260,7 @@ namespace AtCad
             this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Sylfaen", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.Image = global::AtCad.Properties.Resources.combo_chart_26px;
+            this.btnDashboard.Image = global::AtCad.Properties.Resources.line_chart_30px;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.Location = new System.Drawing.Point(12, 83);
             this.btnDashboard.Name = "btnDashboard";
@@ -299,6 +327,7 @@ namespace AtCad
         private System.Windows.Forms.Label lblClock;
         private System.Windows.Forms.Timer clock;
         private System.Windows.Forms.Label lblDay;
+        private System.Windows.Forms.Button button1;
     }
 }
 
