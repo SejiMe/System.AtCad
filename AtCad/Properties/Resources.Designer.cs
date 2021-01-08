@@ -73,6 +73,16 @@ namespace AtCad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap inventory_flow_32px_white {
+            get {
+                object obj = ResourceManager.GetObject("inventory_flow_32px_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap line_chart_30px {
             get {
                 object obj = ResourceManager.GetObject("line_chart_30px", resourceCulture);
@@ -83,9 +93,69 @@ namespace AtCad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap loading_32px {
+            get {
+                object obj = ResourceManager.GetObject("loading_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_rounded_down_32px_white {
+            get {
+                object obj = ResourceManager.GetObject("logout_rounded_down_32px_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minus_24px {
+            get {
+                object obj = ResourceManager.GetObject("minus_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap moleskine_32px_white {
             get {
                 object obj = ResourceManager.GetObject("moleskine_32px white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_24px {
+            get {
+                object obj = ResourceManager.GetObject("plus_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap update_32px {
+            get {
+                object obj = ResourceManager.GetObject("update_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warehouse_32px_white {
+            get {
+                object obj = ResourceManager.GetObject("warehouse_32px_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

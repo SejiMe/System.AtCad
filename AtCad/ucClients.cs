@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AtCad.Project_Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,16 @@ namespace AtCad
 {
     public partial class ucClients : UserControl
     {
+        private static List<Client> listOfClient = new List<Client>();
+
+
         private static ucClients _instance;
+
+        public void LoatClient()
+        {
+
+        }
+
 
         public static ucClients Instance
         {
