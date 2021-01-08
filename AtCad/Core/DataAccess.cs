@@ -16,6 +16,7 @@ namespace AtCad.Core
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.connectionValue("ATCADDB")))
             {
 
+
             }
         }
 
@@ -27,7 +28,8 @@ namespace AtCad.Core
                 return clients;
             }
         }
-
-
     }
-}
+ }
+
+
+          
