@@ -8,7 +8,11 @@ namespace AtCad.Project_Data
 {
     public class Client
     {
-        public string ClientName { get; set; }
+        public int ID { get; set; }
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
         public string ContactNumber { get; set; }
         public string Address { get; set; }
 
@@ -16,7 +20,7 @@ namespace AtCad.Project_Data
         {
             get
             {
-                return $"{ClientName} {ContactNumber} - {Address}";
+                return $"{Title}, {FirstName} {MiddleName} {LastName} - {ContactNumber} - {Address}";
             }
         }
     }

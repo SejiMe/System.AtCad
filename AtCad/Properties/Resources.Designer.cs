@@ -63,6 +63,36 @@ namespace AtCad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap client_management_32px {
+            get {
+                object obj = ResourceManager.GetObject("client_management_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap client_management_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("client_management_32px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap client_management_64px {
+            get {
+                object obj = ResourceManager.GetObject("client_management_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer_32px {
             get {
                 object obj = ResourceManager.GetObject("customer_32px", resourceCulture);
@@ -136,6 +166,16 @@ namespace AtCad.Properties {
         internal static System.Drawing.Bitmap plus_24px {
             get {
                 object obj = ResourceManager.GetObject("plus_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restart_40px {
+            get {
+                object obj = ResourceManager.GetObject("restart_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

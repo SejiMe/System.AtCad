@@ -30,17 +30,20 @@ namespace AtCad
         private void InitializeComponent()
         {
             this.panelListbox = new System.Windows.Forms.Panel();
+            this.btnDisplay = new System.Windows.Forms.Button();
             this.listBoxClient = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textName = new System.Windows.Forms.TextBox();
-            this.textNumber = new System.Windows.Forms.TextBox();
+            this.btnResetIDGen = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textID = new System.Windows.Forms.TextBox();
             this.textAddress = new System.Windows.Forms.TextBox();
-            this.btnDisplay = new System.Windows.Forms.Button();
+            this.textNumber = new System.Windows.Forms.TextBox();
+            this.textName = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelListbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -56,73 +59,6 @@ namespace AtCad
             this.panelListbox.Name = "panelListbox";
             this.panelListbox.Size = new System.Drawing.Size(472, 670);
             this.panelListbox.TabIndex = 0;
-            // 
-            // listBoxClient
-            // 
-            this.listBoxClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
-            this.listBoxClient.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxClient.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.listBoxClient.FormattingEnabled = true;
-            this.listBoxClient.ItemHeight = 18;
-            this.listBoxClient.Location = new System.Drawing.Point(34, 106);
-            this.listBoxClient.Name = "listBoxClient";
-            this.listBoxClient.Size = new System.Drawing.Size(400, 508);
-            this.listBoxClient.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(102)))), ((int)(((byte)(139)))));
-            this.panel1.Location = new System.Drawing.Point(26, 98);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(417, 528);
-            this.panel1.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
-            this.panel2.Controls.Add(this.textAddress);
-            this.panel2.Controls.Add(this.textNumber);
-            this.panel2.Controls.Add(this.textName);
-            this.panel2.Location = new System.Drawing.Point(606, 39);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(403, 417);
-            this.panel2.TabIndex = 1;
-            // 
-            // textName
-            // 
-            this.textName.Font = new System.Drawing.Font("Roboto Cn", 16F);
-            this.textName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            this.textName.Location = new System.Drawing.Point(72, 96);
-            this.textName.Multiline = true;
-            this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(250, 36);
-            this.textName.TabIndex = 0;
-            this.textName.Text = "Client Name";
-            this.textName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textNumber
-            // 
-            this.textNumber.Font = new System.Drawing.Font("Roboto Cn", 16F);
-            this.textNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            this.textNumber.Location = new System.Drawing.Point(72, 154);
-            this.textNumber.Multiline = true;
-            this.textNumber.Name = "textNumber";
-            this.textNumber.Size = new System.Drawing.Size(250, 36);
-            this.textNumber.TabIndex = 1;
-            this.textNumber.Text = "Contact Number";
-            this.textNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textAddress
-            // 
-            this.textAddress.Font = new System.Drawing.Font("Roboto Cn", 14F);
-            this.textAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            this.textAddress.Location = new System.Drawing.Point(25, 208);
-            this.textAddress.Multiline = true;
-            this.textAddress.Name = "textAddress";
-            this.textAddress.Size = new System.Drawing.Size(354, 146);
-            this.textAddress.TabIndex = 2;
-            this.textAddress.Text = "Address";
-            this.textAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnDisplay
             // 
@@ -143,6 +79,130 @@ namespace AtCad
             this.btnDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDisplay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDisplay.UseVisualStyleBackColor = true;
+            // 
+            // listBoxClient
+            // 
+            this.listBoxClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
+            this.listBoxClient.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxClient.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.listBoxClient.FormattingEnabled = true;
+            this.listBoxClient.ItemHeight = 18;
+            this.listBoxClient.Location = new System.Drawing.Point(34, 106);
+            this.listBoxClient.Name = "listBoxClient";
+            this.listBoxClient.Size = new System.Drawing.Size(400, 508);
+            this.listBoxClient.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Roboto Cn", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Image = global::AtCad.Properties.Resources.customer_32px;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(166, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 46);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Clients";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(102)))), ((int)(((byte)(139)))));
+            this.panel1.Location = new System.Drawing.Point(26, 98);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(417, 528);
+            this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
+            this.panel2.Controls.Add(this.btnResetIDGen);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.textID);
+            this.panel2.Controls.Add(this.textAddress);
+            this.panel2.Controls.Add(this.textNumber);
+            this.panel2.Controls.Add(this.textName);
+            this.panel2.Location = new System.Drawing.Point(606, 39);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(403, 417);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnResetIDGen
+            // 
+            this.btnResetIDGen.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnResetIDGen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResetIDGen.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnResetIDGen.FlatAppearance.BorderSize = 0;
+            this.btnResetIDGen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(18)))));
+            this.btnResetIDGen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
+            this.btnResetIDGen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetIDGen.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetIDGen.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnResetIDGen.Image = global::AtCad.Properties.Resources.restart_40px;
+            this.btnResetIDGen.Location = new System.Drawing.Point(341, 96);
+            this.btnResetIDGen.Name = "btnResetIDGen";
+            this.btnResetIDGen.Size = new System.Drawing.Size(46, 41);
+            this.btnResetIDGen.TabIndex = 7;
+            this.btnResetIDGen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnResetIDGen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnResetIDGen.UseVisualStyleBackColor = true;
+            this.btnResetIDGen.Click += new System.EventHandler(this.btnResetIDGen_Click);
+            // 
+            // label2
+            // 
+            this.label2.Image = global::AtCad.Properties.Resources.client_management_64px;
+            this.label2.Location = new System.Drawing.Point(173, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 56);
+            this.label2.TabIndex = 4;
+            // 
+            // textID
+            // 
+            this.textID.Font = new System.Drawing.Font("Roboto Cn", 16F);
+            this.textID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.textID.Location = new System.Drawing.Point(85, 100);
+            this.textID.Multiline = true;
+            this.textID.Name = "textID";
+            this.textID.Size = new System.Drawing.Size(250, 36);
+            this.textID.TabIndex = 3;
+            this.textID.Text = "Client ID";
+            this.textID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textAddress
+            // 
+            this.textAddress.Font = new System.Drawing.Font("Roboto Cn", 14F);
+            this.textAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.textAddress.Location = new System.Drawing.Point(33, 253);
+            this.textAddress.Multiline = true;
+            this.textAddress.Name = "textAddress";
+            this.textAddress.Size = new System.Drawing.Size(354, 146);
+            this.textAddress.TabIndex = 2;
+            this.textAddress.Text = "Address";
+            this.textAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textNumber
+            // 
+            this.textNumber.Font = new System.Drawing.Font("Roboto Cn", 16F);
+            this.textNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.textNumber.Location = new System.Drawing.Point(85, 202);
+            this.textNumber.Multiline = true;
+            this.textNumber.Name = "textNumber";
+            this.textNumber.Size = new System.Drawing.Size(250, 36);
+            this.textNumber.TabIndex = 1;
+            this.textNumber.Text = "Contact Number";
+            this.textNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textName
+            // 
+            this.textName.Font = new System.Drawing.Font("Roboto Cn", 16F);
+            this.textName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.textName.Location = new System.Drawing.Point(85, 151);
+            this.textName.Multiline = true;
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(250, 36);
+            this.textName.TabIndex = 0;
+            this.textName.Text = "Client Name";
+            this.textName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnUpdate
             // 
@@ -204,19 +264,6 @@ namespace AtCad
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Roboto Cn", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Image = global::AtCad.Properties.Resources.customer_32px;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(166, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Clients";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ucClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,5 +297,8 @@ namespace AtCad
         private System.Windows.Forms.TextBox textNumber;
         private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.Button btnDisplay;
+        private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnResetIDGen;
     }
 }
