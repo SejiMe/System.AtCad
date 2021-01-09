@@ -19,11 +19,11 @@ namespace AtCad.Core
             }
         }
 
-        public List<Client> getClient()
+        public List<Client> getAllClient()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.connectionValue("ATCADDB")))
             {
-                var clients = new List<Client>();
+                var clients = connection.Query<Client>("dbo.GetAllClient").ToList();
                 return clients;
             }
         }

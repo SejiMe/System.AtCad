@@ -189,6 +189,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>ATCADDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\restart_40px.png" />
+    <None Include="Resources\client_management_64px.png" />
+    <None Include="Resources\client_management_32px1.png" />
+    <None Include="Resources\client_management_32px.png" />
     <None Include="Resources\loading_32px.png" />
     <None Include="Resources\update_32px.png" />
     <None Include="Resources\warehouse_32px white.png" />
