@@ -42,7 +42,6 @@ namespace AtCad
         {
             InitializeComponent();
             listOfClient = DA.getAllClient();
-
             textID.Text = $"{GenerateInitialID(GetCurrentID())}";
             LoadClients();
         }
@@ -83,7 +82,7 @@ namespace AtCad
             int randomValue = random.Next(0, 9);
             string date = DateTime.Now.ToString("MM yy");
             date = date.Replace(" ", "");
-            return $"{currentID}" + date + DateTime.Now.ToString("HH")+ randomValue.ToString();
+            return $"{currentID}" + date + DateTime.Now.ToString("HH")+ $"{randomValue}";
         }
 
         private string GenerateID(int currentID, bool isGenerated)
@@ -92,17 +91,16 @@ namespace AtCad
             int randomValue = random.Next(0,9);
             string date = DateTime.Now.ToString("MM yy");
             date = date.Replace(" ", "");
-            string ID ="";
+            string ID = textID.Text;
 
             if (isGenerated == true)
             {
-                ID = $"{currentID}" + date + DateTime.Now.ToString("HH") + randomValue.ToString();
+                return ID;
             }
             else if(isGenerated == false)
             {
-                MessageBox.Show("false but not changed");
                 randomValue = random.Next(0, 9);
-                ID = $"{currentID}" + date + DateTime.Now.ToString("HH") + randomValue.ToString();
+                ID = $"{currentID}" + date + DateTime.Now.ToString("HH") + $"{randomValue}";
             }
             return ID;
         }
@@ -111,7 +109,7 @@ namespace AtCad
 
         private void btnResetIDGen_Click(object sender, EventArgs e)
         {
-            GenerateID(listOfClient.Count,isIDGenerated(int.Parse(textID.Text)));
+           textID.Text = GenerateID(listOfClient.Count + 1,isIDGenerated(int.Parse(textID.Text)));
         }
     }
 }
