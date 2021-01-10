@@ -110,23 +110,79 @@ namespace AtCad
         #endregion
 
         #region Textboxes Enter and Leave
-        private void textName_Enter(object sender, EventArgs e)
+
+        private void textFirstName_Enter(object sender, EventArgs e)
         {
-            if (textName.Text == "Client Name")
+            if (textFirstName.Text == "First Name")
             {
-                textName.ForeColor = Color.Black;
-                textName.Text = "";
+                textFirstName.ForeColor = Color.Black;
+                textFirstName.Text = "";
             }
         }
 
-        private void textName_Leave(object sender, EventArgs e)
+        private void textFirstName_Leave(object sender, EventArgs e)
         {
-            if (textName.Text == "")
+            if (textFirstName.Text == "")
             {
-                textName.ForeColor = Color.FromArgb(137, 137, 137);
-                textName.Text = "Client Name";
+                textFirstName.ForeColor = Color.FromArgb(137, 137, 137);
+                textFirstName.Text = "First Name";
             }
         }
+
+        private void textMiddleName_Enter(object sender, EventArgs e)
+        {
+            if (textMiddleName.Text == "Middle Name")
+            {
+                textMiddleName.ForeColor = Color.Black;
+                textMiddleName.Text = "";
+            }
+        }
+
+        private void textMiddleName_Leave(object sender, EventArgs e)
+        {
+            if (textMiddleName.Text == "")
+            {
+                textMiddleName.ForeColor = Color.FromArgb(137, 137, 137);
+                textMiddleName.Text = "Middle Name";
+            }
+        }
+
+        private void textLastName_Enter(object sender, EventArgs e)
+        {
+            if (textLastName.Text == "Last Name")
+            {
+                textLastName.ForeColor = Color.Black;
+                textLastName.Text = "";
+            }
+        }
+
+        private void textLastName_Leave(object sender, EventArgs e)
+        {
+            if (textLastName.Text == "")
+            {
+                textLastName.ForeColor = Color.FromArgb(137, 137, 137);
+                textLastName.Text = "Last Name";
+            }
+        }
+
+        private void textTitle_Enter(object sender, EventArgs e)
+        {
+            if (textTitle.Text == "Title")
+            {
+                textTitle.ForeColor = Color.Black;
+                textTitle.Text = "";
+            }
+        }
+
+        private void textTitle_Leave(object sender, EventArgs e)
+        {
+            if (textTitle.Text == "")
+            {
+                textTitle.ForeColor = Color.FromArgb(137, 137, 137);
+                textTitle.Text = "Title";
+            }
+        }
+
 
         private void textNumber_Enter(object sender, EventArgs e)
         {
@@ -172,5 +228,32 @@ namespace AtCad
         }
         #endregion
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            int convertedNum;
+            bool Converted = int.TryParse(textID.Text, out convertedNum);
+            if (Converted is false)
+            {
+                string title = "Error In Conversion!", 
+                    message = "You need to generate another ID\n" +
+                    "Click OK to generate\n" +
+                    "Cancel to Leave";
+
+                MessageBoxIcon icon = MessageBoxIcon.Error;
+                MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+
+                DialogResult result = MessageBox.Show(title, message, buttons, icon);
+                if (result == DialogResult.OK)
+                {
+                    int tempID = int.Parse(GenerateInitialID(listOfClient.Count + 1));
+                    GenerateID(tempID, isIDGenerated(tempID));
+                }
+            }
+            else
+            {
+                //TODO insert query method
+            }
+           
+        }
     }
 }
