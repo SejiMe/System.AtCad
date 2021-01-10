@@ -180,6 +180,8 @@ namespace AtCad
             this.textAddress.TabIndex = 2;
             this.textAddress.Text = "Address";
             this.textAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textAddress.Enter += new System.EventHandler(this.textAddress_Enter);
+            this.textAddress.Leave += new System.EventHandler(this.textAddress_Leave);
             // 
             // textNumber
             // 
@@ -192,6 +194,8 @@ namespace AtCad
             this.textNumber.TabIndex = 1;
             this.textNumber.Text = "Contact Number";
             this.textNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNumber.Enter += new System.EventHandler(this.textNumber_Enter);
+            this.textNumber.Layout += new System.Windows.Forms.LayoutEventHandler(this.textNumber_Layout);
             // 
             // textName
             // 
@@ -204,6 +208,8 @@ namespace AtCad
             this.textName.TabIndex = 0;
             this.textName.Text = "Client Name";
             this.textName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textName.Enter += new System.EventHandler(this.textName_Enter);
+            this.textName.Leave += new System.EventHandler(this.textName_Leave);
             // 
             // btnUpdate
             // 

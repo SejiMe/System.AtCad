@@ -46,6 +46,7 @@ namespace AtCad
             LoadClients();
         }
 
+        //TODO refactor
         #region ID Generator
         private static int GetCurrentID()
         {
@@ -95,21 +96,81 @@ namespace AtCad
 
             if (isGenerated == true)
             {
-                return ID;
+                randomValue = random.Next(0, 9);
+                ID = $"{currentID}" + date + DateTime.Now.ToString("HH") + $"{randomValue}";
+               
             }
             else if(isGenerated == false)
             {
-                randomValue = random.Next(0, 9);
-                ID = $"{currentID}" + date + DateTime.Now.ToString("HH") + $"{randomValue}";
+                return ID;
             }
             return ID;
         }
 
         #endregion
 
+        #region Textboxes Enter and Leave
+        private void textName_Enter(object sender, EventArgs e)
+        {
+            if (textName.Text == "Client Name")
+            {
+                textName.ForeColor = Color.Black;
+                textName.Text = "";
+            }
+        }
+
+        private void textName_Leave(object sender, EventArgs e)
+        {
+            if (textName.Text == "")
+            {
+                textName.ForeColor = Color.FromArgb(137, 137, 137);
+                textName.Text = "Client Name";
+            }
+        }
+
+        private void textNumber_Enter(object sender, EventArgs e)
+        {
+            if (textNumber.Text == "Contact Number")
+            {
+                textNumber.ForeColor = Color.Black;
+                textNumber.Text = "";
+            }
+        }
+
+        private void textNumber_Layout(object sender, LayoutEventArgs e)
+        {
+            if (textNumber.Text == "")
+            {
+                textNumber.ForeColor = Color.FromArgb(137, 137, 137);
+                textNumber.Text = "Contact Number";
+            }
+        }
+
+        private void textAddress_Enter(object sender, EventArgs e)
+        {
+            if (textAddress.Text == "Address")
+            {
+                textAddress.ForeColor = Color.Black;
+                textAddress.Text = "";
+            }
+        }
+
+        private void textAddress_Leave(object sender, EventArgs e)
+        {
+            if (textAddress.Text == "")
+            {
+                textAddress.ForeColor = Color.FromArgb(137, 137, 137);
+                textAddress.Text = "Address";
+            }
+        }
+        #endregion
+
+        #region Buttons and Behaviors
         private void btnResetIDGen_Click(object sender, EventArgs e)
         {
-           textID.Text = GenerateID(listOfClient.Count + 1,isIDGenerated(int.Parse(textID.Text)));
+            textID.Text = GenerateID(listOfClient.Count + 1, isIDGenerated(int.Parse(textID.Text)));
         }
+        #endregion
+
     }
 }
