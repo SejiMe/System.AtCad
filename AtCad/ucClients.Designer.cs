@@ -163,6 +163,7 @@ namespace AtCad
             this.textID.Location = new System.Drawing.Point(85, 100);
             this.textID.Multiline = true;
             this.textID.Name = "textID";
+            this.textID.ReadOnly = true;
             this.textID.Size = new System.Drawing.Size(250, 36);
             this.textID.TabIndex = 3;
             this.textID.Text = "Client ID";
