@@ -35,6 +35,9 @@ namespace AtCad
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textTitle = new System.Windows.Forms.TextBox();
+            this.textLastName = new System.Windows.Forms.TextBox();
+            this.textMiddleName = new System.Windows.Forms.TextBox();
             this.btnResetIDGen = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textID = new System.Windows.Forms.TextBox();
@@ -44,9 +47,6 @@ namespace AtCad
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.textMiddleName = new System.Windows.Forms.TextBox();
-            this.textLastName = new System.Windows.Forms.TextBox();
-            this.textTitle = new System.Windows.Forms.TextBox();
             this.panelListbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -132,6 +132,48 @@ namespace AtCad
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(403, 417);
             this.panel2.TabIndex = 1;
+            // 
+            // textTitle
+            // 
+            this.textTitle.Font = new System.Drawing.Font("Roboto Cn", 16F);
+            this.textTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.textTitle.Location = new System.Drawing.Point(278, 229);
+            this.textTitle.Multiline = true;
+            this.textTitle.Name = "textTitle";
+            this.textTitle.Size = new System.Drawing.Size(103, 36);
+            this.textTitle.TabIndex = 10;
+            this.textTitle.Text = "Title";
+            this.textTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textTitle.Enter += new System.EventHandler(this.textTitle_Enter);
+            this.textTitle.Leave += new System.EventHandler(this.textTitle_Leave);
+            // 
+            // textLastName
+            // 
+            this.textLastName.Font = new System.Drawing.Font("Roboto Cn", 16F);
+            this.textLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.textLastName.Location = new System.Drawing.Point(22, 229);
+            this.textLastName.Multiline = true;
+            this.textLastName.Name = "textLastName";
+            this.textLastName.Size = new System.Drawing.Size(250, 36);
+            this.textLastName.TabIndex = 9;
+            this.textLastName.Text = "Last Name";
+            this.textLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textLastName.Enter += new System.EventHandler(this.textLastName_Enter);
+            this.textLastName.Leave += new System.EventHandler(this.textLastName_Leave);
+            // 
+            // textMiddleName
+            // 
+            this.textMiddleName.Font = new System.Drawing.Font("Roboto Cn", 16F);
+            this.textMiddleName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.textMiddleName.Location = new System.Drawing.Point(22, 187);
+            this.textMiddleName.Multiline = true;
+            this.textMiddleName.Name = "textMiddleName";
+            this.textMiddleName.Size = new System.Drawing.Size(250, 36);
+            this.textMiddleName.TabIndex = 8;
+            this.textMiddleName.Text = "Middle Name";
+            this.textMiddleName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textMiddleName.Enter += new System.EventHandler(this.textMiddleName_Enter);
+            this.textMiddleName.Leave += new System.EventHandler(this.textMiddleName_Leave);
             // 
             // btnResetIDGen
             // 
@@ -277,48 +319,6 @@ namespace AtCad
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // textMiddleName
-            // 
-            this.textMiddleName.Font = new System.Drawing.Font("Roboto Cn", 16F);
-            this.textMiddleName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            this.textMiddleName.Location = new System.Drawing.Point(22, 187);
-            this.textMiddleName.Multiline = true;
-            this.textMiddleName.Name = "textMiddleName";
-            this.textMiddleName.Size = new System.Drawing.Size(250, 36);
-            this.textMiddleName.TabIndex = 8;
-            this.textMiddleName.Text = "Middle Name";
-            this.textMiddleName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textMiddleName.Enter += new System.EventHandler(this.textMiddleName_Enter);
-            this.textMiddleName.Leave += new System.EventHandler(this.textMiddleName_Leave);
-            // 
-            // textLastName
-            // 
-            this.textLastName.Font = new System.Drawing.Font("Roboto Cn", 16F);
-            this.textLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            this.textLastName.Location = new System.Drawing.Point(22, 229);
-            this.textLastName.Multiline = true;
-            this.textLastName.Name = "textLastName";
-            this.textLastName.Size = new System.Drawing.Size(250, 36);
-            this.textLastName.TabIndex = 9;
-            this.textLastName.Text = "Last Name";
-            this.textLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textLastName.Enter += new System.EventHandler(this.textLastName_Enter);
-            this.textLastName.Leave += new System.EventHandler(this.textLastName_Leave);
-            // 
-            // textTitle
-            // 
-            this.textTitle.Font = new System.Drawing.Font("Roboto Cn", 16F);
-            this.textTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            this.textTitle.Location = new System.Drawing.Point(278, 229);
-            this.textTitle.Multiline = true;
-            this.textTitle.Name = "textTitle";
-            this.textTitle.Size = new System.Drawing.Size(103, 36);
-            this.textTitle.TabIndex = 10;
-            this.textTitle.Text = "Title";
-            this.textTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textTitle.Enter += new System.EventHandler(this.textTitle_Enter);
-            this.textTitle.Leave += new System.EventHandler(this.textTitle_Leave);
             // 
             // ucClients
             // 
